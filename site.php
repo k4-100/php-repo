@@ -8,16 +8,13 @@
 </head>
 <body>
  
-  <form action="site.php" method="post">
-    Name: <input type="text" name="name">
-    <br>
-    <input type="submit">
-  </form>
+ <?php 
+    $friends = array("Kevin", true);
+    
+    $friends[10] = 'not a number';
+    echo count($friends);
+  ?>
 
-    <?php 
-        echo $_POST['name'];
-        // echo $_GET['age'];
-    ?>
 
 </body>
 </html>
