@@ -8,12 +8,22 @@
 </head>
 <body>
  
- <?php 
-    $friends = array("Kevin", true);
-    
-    $friends[10] = 'not a number';
-    echo count($friends);
-  ?>
+<form action="site.php" method="post">
+    Apple <input type="checkbox" name="fruits[]" value="apple">
+    <br>
+    Banana <input type="checkbox" name="fruits[]" value="banana">
+    <br>
+    Coconut <input type="checkbox" name="fruits[]" value="coconut">
+    <br>
+    Cherry <input type="checkbox" name="fruits[]" value="cherry">
+    <br>
+    <input type="submit">
+</form>
+
+<?php 
+    $fruits = $_POST["fruits"]; 
+    echo $fruits[0];
+?>
 
 
 </body>
