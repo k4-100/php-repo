@@ -7,8 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-   <?php 
-    echo round(10.51);
-   ?>
+ 
+
+    <form action="site.php" method="get">
+        Name: <input type="text" name="name" id="name">
+
+        <button type="submit">
+            submit
+        </button>
+    </form>
+    <br>
+    
+    Your name is: <?php echo $_GET["name"]?>
+
+
 </body>
 </html>
