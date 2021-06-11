@@ -8,7 +8,8 @@
 </head>
 <body>
    <?php 
-    echo "Hello World";
+    $characterName = "John";
+    echo "There once was a man named $characterName";
    ?>
 </body>
 </html>
