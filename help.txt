@@ -1,0 +1,2 @@
+1. starting php server:
+php -S localhost:4000
