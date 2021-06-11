@@ -8,8 +8,11 @@
 </head>
 <body>
    <?php 
-    $characterName = "John";
-    echo "There once was a man named $characterName";
+    $phrase = "Giraffe Academy";
+    $phrase[0] = "H";
+    $strLen = strlen($phrase);
+    
+    echo substr( str_replace("Hiraffe", "Bro",$phrase) , 5,8 );
    ?>
 </body>
 </html>
