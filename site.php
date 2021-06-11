@@ -8,11 +8,7 @@
 </head>
 <body>
    <?php 
-    $phrase = "Giraffe Academy";
-    $phrase[0] = "H";
-    $strLen = strlen($phrase);
-    
-    echo substr( str_replace("Hiraffe", "Bro",$phrase) , 5,8 );
+    echo round(10.51);
    ?>
 </body>
 </html>
