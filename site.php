@@ -16,10 +16,11 @@
 
 
 <?php 
-    function sayHi( $name ){
-        echo "Hello  $name";
+    function cube($num){
+        return $num**3;
     }
-    sayHi( "susu" );
+
+    echo cube(6);
 ?>
 
 
