@@ -8,18 +8,16 @@
 </head>
 <body>
  
-
-    <form action="site.php" method="get">
-        Name: <input type="text" name="name" id="name">
-
-        <button type="submit">
-            submit
-        </button>
-    </form>
+  <form action="site.php" method="post">
+    Name: <input type="text" name="name">
     <br>
-    
-    Your name is: <?php echo $_GET["name"]?>
+    <input type="submit">
+  </form>
 
+    <?php 
+        echo $_POST['name'];
+        // echo $_GET['age'];
+    ?>
 
 </body>
 </html>
