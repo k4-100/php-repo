@@ -9,10 +9,9 @@
 <body>
  
 <div style="text-align:center;">
-    <?php 
-        for( $i = 0; $i < 10; $i++ )
-            echo "<h4> $i </h4>";        
-    ?>
+    <?php include "header.html" ?>
+    <?php include "content.php" ?>
+    <?php include "footer.html" ?>
 </div>
 
 
