@@ -10,8 +10,11 @@
  
 <div style="text-align:center;">
     <?php include "header.html" ?>
-    <?php include "content.php" ?>
-    <?php include "footer.html" ?>
+    <?php 
+        $number = 10;
+        include "content.php"  
+    ?>
+    <?php include "footer.html" ?> 
 </div>
 
 
