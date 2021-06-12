@@ -10,23 +10,33 @@
  
 <div style="text-align:center;">
     <?php 
-        class Book{
-            var $title;
-            var $author;
-            var $pages;
+        class Student{
 
-            function __construct($title, $author, $pages){
-                $this->title  = $title;
-                $this->author = $author; 
-                $this->pages  = $pages;
-                
-                echo "New book created <br>";
+            var $name;
+            var $major;
+            var $gpa;
+
+
+            function __construct($name, $major, $gpa ){
+                $this->name = $name;
+                $this->major = $major;
+                $this->gpa = $gpa;
             }
-        }
+            
+            function hasHonors(){
+             return $this->gpa >= 3.5 ? "true" : "false"; 
+            }
 
-        $b1 = new Book("Mati","Też Mati",201);
+            
+        }    
 
-        echo "$b1->author <hr>";       
+        $student1 = new Student( "Jim", "Business", 2.8 );
+        $student2 = new Student("Pam", "Art", 3.6 );
+
+
+
+        echo " $student1->name hasHonors() == ", $student1->hasHonors() , "<br>";;
+        echo "$student2->name hasHonors() == ", $student2->hasHonors() , "<br>";
     ?>
 </div>
 
