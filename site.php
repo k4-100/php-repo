@@ -8,19 +8,13 @@
 </head>
 <body>
  
+<div style="text-align:center;">
+    <?php 
+        for( $i = 0; $i < 10; $i++ )
+            echo "<h4> $i </h4>";        
+    ?>
+</div>
 
-<?php 
-    /** sss */
-    $index = -1;
-    $range = 10;
-    do{
-        echo $index;
-        if( $index < $range )
-            echo ", ";
-    }
-    while ( ++$index <= $range )
-        
-?>
 
 
 </body>
