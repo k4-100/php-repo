@@ -9,12 +9,22 @@
 <body>
  
 <div style="text-align:center;">
-    <?php include "header.html" ?>
     <?php 
-        $number = 10;
-        include "content.php"  
+        class Book{
+            var $title;
+            var $author;
+            var $pages;
+        }
+
+        $b1 = new Book;
+
+        $b1->title = "Harry Potter";
+        $b1->author = "JK Rowling";
+        $b1->pages = 400;
+        
+
+        echo "$b1->title <hr>";
     ?>
-    <?php include "footer.html" ?> 
 </div>
 
 
