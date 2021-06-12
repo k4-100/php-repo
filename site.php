@@ -10,33 +10,54 @@
  
 <div style="text-align:center;">
     <?php 
-        class Student{
+        class Movie {
+            private $title;
+            private $rating;
 
-            var $name;
-            var $major;
-            var $gpa;
-
-
-            function __construct($name, $major, $gpa ){
-                $this->name = $name;
-                $this->major = $major;
-                $this->gpa = $gpa;
-            }
-            
-            function hasHonors(){
-             return $this->gpa >= 3.5 ? "true" : "false"; 
+            function __construct( $title, $rating ){
+                $this->title    = $title;
+                $this->setRating( $rating );
             }
 
-            
-        }    
 
-        $student1 = new Student( "Jim", "Business", 2.8 );
-        $student2 = new Student("Pam", "Art", 3.6 );
+            function getShallowCopy(){
+                return $this;
+            }
+
+            function getRating(){
+                return $this->rating;
+            }
+
+            function setRating( $rating ){
+                $properRatings = array(
+                    "G",
+                    "PG",
+                    "PG-13",
+                    "R",
+                    "NR"
+                );
+                            
+                for( $i=0; $i < count( $properRatings ); $i++ ){
+                    if( $properRatings[$i] == $rating ){
+                        $this->rating = $rating;
+                        break;
+                    }
+                }
+            }
+        }
+
+        
+        $avengers = new Movie("Avengers", "P-13");
+            // G, PG, PG-13, R, NR
+
+        $test = $avengers->getShallowCopy();
+        // echo $test->rating;
+
+        echo $avengers->setRating("G");
+        echo $avengers->setRating("NMMM");
 
 
-
-        echo " $student1->name hasHonors() == ", $student1->hasHonors() , "<br>";;
-        echo "$student2->name hasHonors() == ", $student2->hasHonors() , "<br>";
+        echo $avengers->getRating();
     ?>
 </div>
 
