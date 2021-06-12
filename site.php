@@ -10,54 +10,28 @@
  
 <div style="text-align:center;">
     <?php 
-        class Movie {
-            private $title;
-            private $rating;
-
-            function __construct( $title, $rating ){
-                $this->title    = $title;
-                $this->setRating( $rating );
-            }
-
-
-            function getShallowCopy(){
-                return $this;
-            }
-
-            function getRating(){
-                return $this->rating;
-            }
-
-            function setRating( $rating ){
-                $properRatings = array(
-                    "G",
-                    "PG",
-                    "PG-13",
-                    "R",
-                    "NR"
-                );
-                            
-                for( $i=0; $i < count( $properRatings ); $i++ ){
-                    if( $properRatings[$i] == $rating ){
-                        $this->rating = $rating;
-                        break;
-                    }
-                }
-            }
+      class Chef{
+        function makeChicken(){
+            echo "The chef makes chicken <br>";
         }
+        function makeSpecialDish(){
+            echo "The chef makes bbq ribs <br>";
+        }
+      }
 
-        
-        $avengers = new Movie("Avengers", "P-13");
-            // G, PG, PG-13, R, NR
-
-        $test = $avengers->getShallowCopy();
-        // echo $test->rating;
-
-        echo $avengers->setRating("G");
-        echo $avengers->setRating("NMMM");
+      class ItalianChef extends Chef{
+        function makePizza(){
+            echo "The italian chef makes pizza <br>";
+        }
+      }
 
 
-        echo $avengers->getRating();
+      $chef = new Chef();
+      $chef->makeSpecialDish();
+
+      $italianChef = new ItalianChef();
+      $italianChef->makeSpecialDish();
+
     ?>
 </div>
 
