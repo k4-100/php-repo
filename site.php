@@ -14,16 +14,19 @@
             var $title;
             var $author;
             var $pages;
+
+            function __construct($title, $author, $pages){
+                $this->title  = $title;
+                $this->author = $author; 
+                $this->pages  = $pages;
+                
+                echo "New book created <br>";
+            }
         }
 
-        $b1 = new Book;
+        $b1 = new Book("Mati","Też Mati",201);
 
-        $b1->title = "Harry Potter";
-        $b1->author = "JK Rowling";
-        $b1->pages = 400;
-        
-
-        echo "$b1->title <hr>";
+        echo "$b1->author <hr>";       
     ?>
 </div>
 
