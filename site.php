@@ -13,12 +13,12 @@
     /** sss */
     $index = -1;
     $range = 10;
-
-    while ( ++$index <= $range ){
+    do{
         echo $index;
         if( $index < $range )
             echo ", ";
     }
+    while ( ++$index <= $range )
         
 ?>
 
