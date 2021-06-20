@@ -10,27 +10,18 @@
  
 <div style="text-align:center;">
     <?php 
-      class Chef{
-        function makeChicken(){
-            echo "The chef makes chicken <br>";
-        }
-        function makeSpecialDish(){
-            echo "The chef makes bbq ribs <br>";
-        }
-      }
+      $num = 10;
 
-      class ItalianChef extends Chef{
-        function makePizza(){
-            echo "The italian chef makes pizza <br>";
-        }
-      }
-
-
-      $chef = new Chef();
-      $chef->makeSpecialDish();
-
-      $italianChef = new ItalianChef();
-      $italianChef->makeSpecialDish();
+      if( $num == 10 ):
+        echo "is equal: <br>";
+        echo "10 <br>";
+      else:
+        echo "isn't equal <br>";
+        echo "10 <br>";
+        echo "and it's equal: <br>";
+        echo "$num instead ";
+      endif 
+      
 
     ?>
 </div>
